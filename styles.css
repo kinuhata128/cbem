@@ -21,6 +21,9 @@ div {
     max-width: 90%;
     width: 400px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 p {
@@ -42,6 +45,7 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1em;
+    box-sizing: border-box;
 }
 
 button {
