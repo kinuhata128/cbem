@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Sender</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="password">
+        <p>先来验证一下身份~</p>
+        <label for="code">密码是你的生日捏:</label>
+        <input type="text" id="code">
+        <button onclick="submitCode()">确认</button>
+    </div>
+    <div id="instruction" style="display: none;">
+        <p>使用说明：</p>
+        <p>说明文本</p>
+        <button onclick="button1()">我知道了</button>
+    </div>
+    <div id="textinput" style="display:none;">
+        <p>如果你还有什么想说的可以在这里输入哦:</p>
+        <textarea id="textinput" rows="10" cols="50"></textarea>
+        <br>
+        <button onclick="textinput()">确认</button>
+    </div>
+    <div id="reconfirm" style="display:none;">
+        <p>按下这个按钮邮件就会真的被发出去了</p>
+        <button onclick="button2()">确认</button>
+        <button onclick="button3()">我再想想</button>
+    </div>
+    <div id="sending" style="display:none;">
+        <p>邮件正在发送中</p>
+    </div>
+    <div id="end" style="display:none;">
+        <p>我在赶来的路上了！！！</p>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "TYAd8zPmerB7SRssw",
+            });
+        })();
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
